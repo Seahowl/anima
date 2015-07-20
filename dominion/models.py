@@ -40,7 +40,7 @@ class Tree(models.Model):
 class Effect(models.Model):
 	effect_name = models.CharField(max_length=100)
 	effect_description = models.TextField(default="")
-	effect_frequency = models.d
+	effect_frequency = models.TextField(default="")
 
 class Effect_Level(models.Model):
 	effect = models.ForeignKey(Effect)
