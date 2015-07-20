@@ -1,6 +1,20 @@
 from django.db import models
 
 # Create your models here.
+class Effect(models.Model):
+	effect_name = models.CharField(max_length=100)
+	effect_description = models.TextField(default="")
+	effect_frequency = models.CharField(max_length=20)
+	effect_action_type = models.CharField(max_length=20)
+	#negative cost means the effect can't use that characteristic
+	#zero cost means the effect uses that as it's default characteristic
+	#positive cost adds to the effect's cost if the ki is split that direction.
+	effect_str_cost = models.IntegerField()
+	effect_dex_cost = models.IntegerField()
+	effect_agi_cost = models.IntegerField()
+	effect_con_cost = models.IntegerField()
+	effect_pow_cost = models.IntegerField()
+	effect_will_cost = models.IntegerField()
 
 class Technique(models.Model):
 # a Technique has its own attributes, and has advantages (which might have their own advantages) and disadvantages
@@ -24,7 +38,7 @@ class Technique(models.Model):
 	pow_maint = models.IntegerField()
 	will_cost = models.IntegerField()
 	will_maint = models.IntegerField()
-	#the advantages/disadvantages are saved in related tables, so we don't need any room for them here
+	effects = models.ManyToManyField(Effect)
 	def __str__(self):
 		return self.name	
 
@@ -36,11 +50,6 @@ class Tree(models.Model):
 
 	def __str__(self):
 		return self.name	
-
-class Effect(models.Model):
-	effect_name = models.CharField(max_length=100)
-	effect_description = models.TextField(default="")
-	effect_frequency = models.TextField(default="")
 
 class Effect_Level(models.Model):
 	effect = models.ForeignKey(Effect)
@@ -56,7 +65,6 @@ class Effect_Level(models.Model):
 class Effect_Modifier(models.Model):
 	modifier_name = models.CharField(max_length=20)
 	modifier_description = models.TextField(default="")
-	effect_modifier_levels = models.ForeignKey(Effect_Modifier_Level)
 
 class Effect_Modifier_Level(models.Model):
 	effect_modifier = models.ForeignKey(Effect_Modifier)
@@ -67,3 +75,10 @@ class Effect_Modifier_Level(models.Model):
 	level_maint = models.IntegerField()
 	level_mis = models.IntegerField()
 	level_grs = models.IntegerField()
+
+class Technique_Effect_Modifier_Link(models.Model):
+	technique = models.ForeignKey(Technique)
+	effect = models.ForeignKey(Effect)
+	effect_level = models.ForeignKey(Effect_Level)
+	effect_modifier = models.ForeignKey(Effect_Modifier, null=True)
+	effect_modifier_level = models.ForeignKey(Effect_Modifier_Level, null=True)
