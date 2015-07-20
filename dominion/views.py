@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.core import serializers
 from django.views.generic import View
 
-from .models import Tree, Technique, Technique_Advantage, Technique_Sub_Advantage, Technique_Disadvantage
+from .models import Tree, Technique
 # Create your views here.
 
 class GetTrees(View):

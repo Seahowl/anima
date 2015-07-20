@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Tree, Technique, Technique_Advantage, Technique_Sub_Advantage, Technique_Disadvantage
+from .models import Tree, Technique
 
 class TreeAdmin(admin.ModelAdmin):
       list_display = ['name', 'total_mk', 'num_of_techniques']

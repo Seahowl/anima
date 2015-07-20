@@ -37,19 +37,33 @@ class Tree(models.Model):
 	def __str__(self):
 		return self.name	
 
-class Technique_Advantage(models.Model):
-# table linking techniques with advantages between technique ID and advanage ID
-	technique = models.ForeignKey(Technique)
-	advantage = models.IntegerField()
+class Effect(models.Model):
+	effect_name = models.CharField(max_length=100)
+	effect_description = models.TextField(default="")
+	effect_frequency = models.d
 
-class Technique_Sub_Advantage(models.Model):
-#table linking a technique with an advantage where an optional advantage was chosen
-#since django uses an auto id as the FK, and we have the technique in the Tech_Advantage table, we don't need to have it as a FK here
-	advantage = models.ForeignKey(Technique_Advantage)
-	sub_advantage = models.IntegerField()
+class Effect_Level(models.Model):
+	effect = models.ForeignKey(Effect)
+	level_name = models.CharField(max_length=20)
+	level_primary_cost = models.IntegerField()
+	level_secondary_cost = models.IntegerField()
+	level_mk = models.IntegerField()
+	level_maint = models.IntegerField()
+	level_mis = models.IntegerField()
+	level_grs = models.IntegerField()
+	level_tech_level = models.IntegerField()
 
-class Technique_Disadvantage(models.Model):
-#table linking a technique with the chosen disadvantages.
-	technique = models.ForeignKey(Technique)
-	#disadvantage is an integer corresponding to the ID of the disadvantage in the loaded JSON file
-	disadvantage = models.IntegerField()
+class Effect_Modifier(models.Model):
+	modifier_name = models.CharField(max_length=20)
+	modifier_description = models.TextField(default="")
+	effect_modifier_levels = models.ForeignKey(Effect_Modifier_Level)
+
+class Effect_Modifier_Level(models.Model):
+	effect_modifier = models.ForeignKey(Effect_Modifier)
+	level_name = models.CharField(max_length=20)
+	level_description = models.TextField(default="")
+	level_cost = models.IntegerField()
+	level_mk = models.IntegerField()
+	level_maint = models.IntegerField()
+	level_mis = models.IntegerField()
+	level_grs = models.IntegerField()
