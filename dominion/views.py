@@ -4,12 +4,11 @@ from django.core import serializers
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Tree, Technique
+from .models import Tree, Technique, Effect, Effect_Level, Effect_Modifier, Effect_Modifier_Level, Disadvantage, Disadvantage_Levels
 # Create your views here.
-class GetTrees(View):
+class AllTrees(View):
 	def get(self, request):
 		serializedTrees = serializers.serialize("json", Tree.objects.all())
-
 		return HttpResponse(serializedTrees, content_type="application/json")
 	def put(self, request):
 		return HttpResponseNotAllowed(['GET'])
@@ -37,7 +36,8 @@ class SingleTree(View):
 	def delete(self, request):
 		return HttpResponseNotAllowed(['GET'])
 
-class GetTechniques(View):
+#this is the technique post/get all
+class AllTechniques(View):
 	def get(self, request):
 		serializedTechniques = serializers.serialize("json", Technique.objects.all())
 		return HttpResponse(serializedTechniques, content_type="application/json")
@@ -49,7 +49,7 @@ class GetTechniques(View):
 	def delete(self, request):
 		return HttpResponseNotAllowed(['GET'])
 
-#No get here because it's a full get/post/delete method
+#this is the technique put/delete/get
 class SingleTechnique(View):
 	def get(self, request, pk):
 		technique = Technique.objects.filter(pk=self.kwargs['pk'])
@@ -150,6 +150,54 @@ class GetEffectModifierLevels(View):
 class GetEffectModifierLevel(View):
 	def get(self, request, pk):
 		serializedEffects = serializers.serialize("json", Effect_Modifier_Level.objects.filter(pk=self.kwargs['pk']))
+		return HttpResponse(serializedEffects, content_type="application/json")
+
+	def put(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def post(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def delete(self, request):
+		return HttpResponseNotAllowed(['GET'])
+
+class GetDisadvantages(View):
+	def get(self, request):
+		serializedDisadvantages = serializers.serialize("json", Disadvantage.objects.all())
+		return HttpResponse(serializedDisadvantages, content_type="application/json")
+
+	def put(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def post(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def delete(self, request):
+		return HttpResponseNotAllowed(['GET'])
+
+class GetDisadvantage(View):
+	def get(self, request, pk):
+		serializedEffects = serializers.serialize("json", Disadvantage.objects.filter(pk=self.kwargs['pk']))
+		return HttpResponse(serializedEffects, content_type="application/json")
+
+	def put(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def post(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def delete(self, request):
+		return HttpResponseNotAllowed(['GET'])
+
+class GetDisadvantageLevels(View):
+	def get(self, request, pk):
+		serializedEffects = serializers.serialize("json", Disadvantage_Levels.objects.filter(disadvantage=self.kwargs['pk']))
+		return HttpResponse(serializedEffects, content_type="application/json")
+
+	def put(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def post(self, request):
+		return HttpResponseNotAllowed(['GET'])
+	def delete(self, request):
+		return HttpResponseNotAllowed(['GET'])
+
+class GetDisadvantageLevel(View):
+	def get(self, request, pk):
+		serializedEffects = serializers.serialize("json", Disadvantage_Levels.objects.filter(pk=self.kwargs['pk']))
 		return HttpResponse(serializedEffects, content_type="application/json")
 
 	def put(self, request):

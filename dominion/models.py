@@ -1,20 +1,6 @@
 from django.db import models
 
 # Create your models here.
-class Effect_Modifier(models.Model):
-	modifier_name = models.CharField(max_length=20)
-	modifier_description = models.TextField(default="")
-
-class Effect_Modifier_Level(models.Model):
-	effect_modifier = models.ForeignKey(Effect_Modifier)
-	level_name = models.CharField(max_length=20)
-	level_description = models.TextField(default="")
-	level_cost = models.IntegerField()
-	level_mk = models.IntegerField()
-	level_maint = models.IntegerField()
-	level_mis = models.IntegerField()
-	level_grs = models.IntegerField()
-
 class Effect(models.Model):
 	effect_name = models.CharField(max_length=100)
 	effect_description = models.TextField(default="")
@@ -30,6 +16,30 @@ class Effect(models.Model):
 	effect_pow_cost = models.IntegerField()
 	effect_will_cost = models.IntegerField()
 
+	def __str__(self):
+		return self.effect_name	
+
+class Effect_Modifier(models.Model):
+	effect = models.ForeignKey(Effect)
+	modifier_name = models.CharField(max_length=20)
+	modifier_description = models.TextField(default="")
+
+	def __str__(self):
+		return str(self.effect) + " " + self.modifier_name	
+
+class Effect_Modifier_Level(models.Model):
+	effect_modifier = models.ForeignKey(Effect_Modifier)
+	level_name = models.CharField(max_length=20)
+	level_description = models.TextField(default="")
+	level_cost = models.IntegerField()
+	level_mk = models.IntegerField()
+	level_maint = models.IntegerField()
+	level_mis = models.IntegerField()
+	level_grs = models.IntegerField()
+
+	def __str__(self):
+		return str(self.effect_modifier) + " " + self.level_name	
+
 class Effect_Level(models.Model):
 	effect = models.ForeignKey(Effect)
 	level_name = models.CharField(max_length=20)
@@ -40,6 +50,9 @@ class Effect_Level(models.Model):
 	level_mis = models.IntegerField()
 	level_grs = models.IntegerField()
 	level_tech_level = models.IntegerField()
+
+	def __str__(self):
+		return str(self.effect) + " " + self.level_name	
 
 class Technique(models.Model):
 # a Technique has its own attributes, and has advantages (which might have their own advantages) and disadvantages
@@ -77,4 +90,15 @@ class Tree(models.Model):
 	techniques = models.ManyToManyField(Technique)
 
 	def __str__(self):
-		return self.name	
+		return self.name
+
+class Disadvantage(models.Model):
+	name = models.CharField(max_length=20)
+	description	= models.TextField(default="")
+
+class Disadvantage_Levels(models.Model):
+	disadvantage = models.ForeignKey(Disadvantage)
+	name = models.CharField(max_length=40)
+	description = models.TextField(default="")
+	mk = models.IntegerField()
+	level = models.IntegerField()
