@@ -1,0 +1,522 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Disadv",
+				"Disadvantage"
+			],
+			[
+				"Dis",
+				"Disadvantage"
+			],
+			[
+				"Disadvantage",
+				"Disadvantage_Levels"
+			],
+			[
+				"Te",
+				"TextField"
+			],
+			[
+				"f",
+				"ForeignKey"
+			],
+			[
+				"E",
+				"Effect_Modifier_Level"
+			],
+			[
+				"Eff",
+				"Effect_Level"
+			],
+			[
+				"Http",
+				"HttpResponseNotAllowed"
+			],
+			[
+				"Effect_Mo",
+				"Effect_Modifier_Level"
+			],
+			[
+				"Effect_",
+				"Effect_Modifier"
+			],
+			[
+				"effect_mo",
+				"effect_modifier_levels"
+			],
+			[
+				"mo",
+				"Model"
+			],
+			[
+				"man",
+				"ManyToManyField"
+			],
+			[
+				"m",
+				"max_length"
+			],
+			[
+				"T",
+				"TextField"
+			],
+			[
+				"techn",
+				"techniqueLocation"
+			],
+			[
+				"TEchnique",
+				"Technique_Advantage"
+			],
+			[
+				"in",
+				"IntegerField"
+			],
+			[
+				"ng-re",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"con",
+				"controller	AngularJS"
+			],
+			[
+				"$scope",
+				"$scope	AngularJS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "frontend/Views/trees.html",
+			"settings":
+			{
+				"buffer_size": 593,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "frontend/Views/tabset.html",
+			"settings":
+			{
+				"buffer_size": 367,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "frontend/Controllers/trees.js",
+			"settings":
+			{
+				"buffer_size": 1062,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima/settings.py",
+			"settings":
+			{
+				"buffer_size": 2745,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<div ng-repeat=\"pk in jsonstuff\">\n	{{pk.fields.name}}\n	<div >\n		<technique ng-repeat=\"technique in pk.fields.techniques\" id='{{technique}}'></technique>\n	</div>\n</div>",
+			"file": "frontend/Views/treesTest.html",
+			"file_size": 201,
+			"file_write_time": 130826186349029442,
+			"settings":
+			{
+				"buffer_size": 167,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "frontend/Controllers/functionalities.js",
+			"settings":
+			{
+				"buffer_size": 375,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 409.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Dev/anima",
+		"/C/Dev/anima/anima"
+	],
+	"file_history":
+	[
+		"/C/Dev/anima/frontend/Views/tabTest.html",
+		"/C/Dev/anima/anima/urls.py",
+		"/C/Dev/anima/dominion/models.py",
+		"/C/Dev/anima/dominion/admin.py",
+		"/C/Dev/anima/dominion/views.py",
+		"/C/Dev/anima/dominion/urls.py",
+		"/C/Dev/animacharsheet/polls/views.py",
+		"/C/Dev/animacharsheet/polls/urls.py",
+		"/C/Dev/anima/dominion/migrations/0007_effect_modifier_effect.py",
+		"/C/Users/Brandon/Desktop/oops.html",
+		"/C/Dev/anima/anima/settings.py",
+		"/C/Dev/animacharsheet/polls/admin.py",
+		"/C/Dev/animacharsheet/polls/models.py",
+		"/C/Dev/animacharsheet/animacharsheet/urls.py",
+		"/C/Dev/animacharsheet/animacharsheet/settings.py",
+		"/C/Dev/angularTest/Controllers/greetings1.js",
+		"/C/Dev/angularTest/Controllers/greetings.js",
+		"/C/Dev/angularTest/Views/greetings1.html",
+		"/C/Dev/angularTest/Views/greetings.html",
+		"/C/Dev/angularTest/Views/tabset.html",
+		"/C/Dev/angularTest/Views/tabTest.html",
+		"/C/Dev/angularTest/Controllers/tabTest.js",
+		"/C/Dev/angularTest/Controllers/functionalities.js",
+		"/C/Dev/angularTest/Styles/functionalities.css",
+		"/C/Dev/angularTest/Views/functionalities.html",
+		"/C/Users/Brandon/Documents/mnpls notes",
+		"/C/Dev/angularTest/Views/service.html",
+		"/C/Dev/angularTest/Controllers/controller1.js",
+		"/C/Dev/angularTest/Controllers/service.js",
+		"/C/Dev/angularTest/Views/binding.html",
+		"/C/Dev/angularTest/Views/controller.html",
+		"/C/Dev/angularTest/index.html",
+		"/C/Dev/angular-phonecat/app/index.html",
+		"/C/Dev/angular-phonecat/app/js/controllers.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"class"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "frontend/Views/trees.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								574,
+								317
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "frontend/Views/tabset.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "frontend/Controllers/trees.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								1060
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "anima/settings.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2745,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2616,
+								2616
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1297.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "frontend/Views/treesTest.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								167,
+								0
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "frontend/Controllers/functionalities.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "animaProj.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

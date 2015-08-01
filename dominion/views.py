@@ -4,7 +4,7 @@ from django.core import serializers
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Tree, Technique, Effect, Effect_Level, Effect_Modifier, Effect_Modifier_Level, Disadvantage, Disadvantage_Levels
+from .models import Tree, Technique, Effect, Effect_Level, Effect_Modifier, Effect_Modifier_Level, Disadvantage, Disadvantage_Level
 # Create your views here.
 class AllTrees(View):
 	def get(self, request):
@@ -185,7 +185,7 @@ class GetDisadvantage(View):
 
 class GetDisadvantageLevels(View):
 	def get(self, request, pk):
-		serializedEffects = serializers.serialize("json", Disadvantage_Levels.objects.filter(disadvantage=self.kwargs['pk']))
+		serializedEffects = serializers.serialize("json", Disadvantage_Level.objects.filter(disadvantage=self.kwargs['pk']))
 		return HttpResponse(serializedEffects, content_type="application/json")
 
 	def put(self, request):
@@ -197,7 +197,7 @@ class GetDisadvantageLevels(View):
 
 class GetDisadvantageLevel(View):
 	def get(self, request, pk):
-		serializedEffects = serializers.serialize("json", Disadvantage_Levels.objects.filter(pk=self.kwargs['pk']))
+		serializedEffects = serializers.serialize("json", Disadvantage_Level.objects.filter(pk=self.kwargs['pk']))
 		return HttpResponse(serializedEffects, content_type="application/json")
 
 	def put(self, request):

@@ -30,7 +30,7 @@ class Effect_Modifier(models.Model):
 class Effect_Modifier_Level(models.Model):
 	effect_modifier = models.ForeignKey(Effect_Modifier)
 	level_name = models.CharField(max_length=20)
-	level_description = models.TextField(default="")
+	level_description = models.TextField(default="", blank=True)
 	level_cost = models.IntegerField()
 	level_mk = models.IntegerField()
 	level_maint = models.IntegerField()
@@ -78,8 +78,8 @@ class Technique(models.Model):
 	will_maint = models.IntegerField()
 	effects = models.ManyToManyField(Effect)
 	effect_levels = models.ManyToManyField(Effect_Level)
-	effect_modifiers = models.ManyToManyField(Effect_Modifier)
-	effects_modifier_levels = models.ManyToManyField(Effect_Modifier_Level)
+	effect_modifiers = models.ManyToManyField(Effect_Modifier, blank=True)
+	effects_modifier_levels = models.ManyToManyField(Effect_Modifier_Level, blank=True)
 	def __str__(self):
 		return self.name	
 
@@ -95,10 +95,17 @@ class Tree(models.Model):
 class Disadvantage(models.Model):
 	name = models.CharField(max_length=20)
 	description	= models.TextField(default="")
+	action = models.CharField(max_length=40)
 
-class Disadvantage_Levels(models.Model):
+	def __str__(self):
+		return self.name
+
+class Disadvantage_Level(models.Model):
 	disadvantage = models.ForeignKey(Disadvantage)
 	name = models.CharField(max_length=40)
-	description = models.TextField(default="")
+	description = models.TextField(default="", blank=True)
 	mk = models.IntegerField()
 	level = models.IntegerField()
+
+	def __str__(self):
+		return str(self.disadvantage) + " " + self.name
