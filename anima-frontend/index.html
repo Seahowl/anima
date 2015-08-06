@@ -1,12 +1,109 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.1/ui-bootstrap-tpls.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-</head>
-<body>
+	<title>Anima</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Thanks to maxcdn for hosting this -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!--Thanks to cloudflare for hosting these -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.1/ui-bootstrap-tpls.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script type="text/javascript" src="./shared/app.js"></script>
 
+	<style>
+		html, body 
+		{ 
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-color: #006A3D;
+		}
+		.navbar 
+		{ 
+			border-radius:0; 
+			background-color: #28B478;
+			border-color: #9FEB5B;
+			border-width: 0px;
+			border-bottom-width: 3px;
+			margin-bottom: 0px;
+		}
+		.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand
+		{
+			color: black;
+		}
+		.footer 
+		{
+			bottom: 0;
+    		left: 0;
+  			width: 100%;
+  			/* Set the fixed height of the footer here */
+  			height: 40px;
+  			background-color: #28B478;
+			border-color: #9FEB5B;
+			border-style: solid;
+			border-width: 0px;
+			border-top-width: 3px;
+		}
+		.contentholder
+		{
+			display:flex;
+			position: relative;
+			height: 100%;
+		}
+		.container
+		{
+    		padding: 0px;
+    		width: 100%;
+    		height: 100%;
+		}
+		.pagecontent
+		{
+			background-color: #F0FEE5;
+			border-color: #9FEB5B;
+			border-width: 0px;
+			border-left-width: 3px;
+			border-right-width: 3px;
+			border-style: solid;
+			flex-grow: 1;
+			margin-right: 5%;
+			min-height: 100%;
+			padding: 5px;
+		}
+		.leftdiv
+		{
+			min-width: 10%;
+			width: 10%;
+		}
+
+	</style>
+</head>
+<body ng-app='dominionApp'>
+	<div class="container">
+		<nav class='navbar navbar-default'>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand colornavbar" href="#">Anima</a>
+				</div>
+				<div collapse="isCollapsed" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
+					<ul class="nav navbar-nav">
+						<li><a ui-sref="home">Home</a></li>
+						<li><a ui-sref="dominion">Dominion</a></li>
+						<li><a ui-sref="about">About</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div ui-view class="contentholder"></div>	
+		<footer class="footer">
+			<p>Design and code ©Brandon Slick, 2015.  See it on <a href="https://github.com/Seahowl/anima">Github</a>!  Any use of any trademarks related to the Anima: Beyond Fantasy RPG are not intended to imply any type of ownership or rights to the material.</p>
+		</footer>
+	</div>
 </body>
 </html>
