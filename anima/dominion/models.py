@@ -6,6 +6,8 @@ class Effect(models.Model):
 	effect_description = models.TextField(default="")
 	effect_frequency = models.CharField(max_length=20)
 	effect_action_type = models.CharField(max_length=20)
+	effect_level_name = models.CharField(max_length=20)
+	effect_elements = models.CharField(max_length=50)
 	#negative cost means the effect can't use that characteristic
 	#zero cost means the effect uses that as it's default characteristic
 	#positive cost adds to the effect's cost if the ki is split that direction.
@@ -22,6 +24,7 @@ class Effect(models.Model):
 class Effect_Modifier(models.Model):
 	effect = models.ForeignKey(Effect)
 	modifier_name = models.CharField(max_length=20)
+	modifier_level_name = models.CharField(max_length=20)
 	modifier_description = models.TextField(default="")
 
 	def __str__(self):

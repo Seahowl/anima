@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Anima</title>
+	<title>B Slick Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--Thanks to maxcdn for hosting this -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -11,76 +11,31 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<script type="text/javascript" src="./shared/app.js"></script>
 
-	<style>
-		html, body 
-		{ 
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			background-color: #006A3D;
-		}
-		.navbar 
-		{ 
-			border-radius:0; 
-			background-color: #28B478;
-			border-color: #9FEB5B;
-			border-width: 0px;
-			border-bottom-width: 3px;
-			margin-bottom: 0px;
-		}
-		.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand
-		{
-			color: black;
-		}
-		.footer 
-		{
-			bottom: 0;
-    		left: 0;
-  			width: 100%;
-  			/* Set the fixed height of the footer here */
-  			height: 40px;
-  			background-color: #28B478;
-			border-color: #9FEB5B;
-			border-style: solid;
-			border-width: 0px;
-			border-top-width: 3px;
-		}
-		.contentholder
-		{
-			display:flex;
-			position: relative;
-			height: 100%;
-		}
-		.container
-		{
-    		padding: 0px;
-    		width: 100%;
-    		height: 100%;
-		}
-		.pagecontent
-		{
-			background-color: #F0FEE5;
-			border-color: #9FEB5B;
-			border-width: 0px;
-			border-left-width: 3px;
-			border-right-width: 3px;
-			border-style: solid;
-			flex-grow: 1;
-			margin-right: 5%;
-			min-height: 100%;
-			padding: 5px;
-		}
-		.leftdiv
-		{
-			min-width: 10%;
-			width: 10%;
-		}
+	<link href='http://fonts.googleapis.com/css?family=Alegreya:900' rel='stylesheet' type='text/css'>
 
-	</style>
+	<link rel="stylesheet" type="text/css" href="./shared/index.css"></link>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="./shared/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./shared/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./shared/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./shared/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./shared/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./shared/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./shared/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./shared/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./shared/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="./shared/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="./shared/favicon/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="./shared/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="./shared/favicon/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="./shared/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="./shared/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-TileImage" content="./shared/favicon/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body ng-app='dominionApp'>
-	<div class="container">
-		<nav class='navbar navbar-default'>
+		<nav class='navbar navbar-pageheader navbar-default navbar-pageheader-default'>
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
@@ -89,10 +44,10 @@
 							<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand colornavbar" href="#">Anima</a>
+					<a class="navbar-brand navbar-pageheader-brand" href="#"><img src="./shared/static/logo.png" alt="Logo" width="109" height="50"></a>
 				</div>
 				<div collapse="isCollapsed" class="navbar-collapse" ng-class="{collapse: isCollapsed}">
-					<ul class="nav navbar-nav">
+					<ul class="nav navbar-nav navbar-pageheader-nav">
 						<li><a ui-sref="home">Home</a></li>
 						<li><a ui-sref="dominion">Dominion</a></li>
 						<li><a ui-sref="about">About</a></li>
@@ -100,10 +55,8 @@
 				</div>
 			</div>
 		</nav>
-		<div ui-view class="contentholder"></div>	
+		<div ui-view="" class="contentholder"></div>	
 		<footer class="footer">
-			<p>Design and code ©Brandon Slick, 2015.  See it on <a href="https://github.com/Seahowl/anima">Github</a>!  Any use of any trademarks related to the Anima: Beyond Fantasy RPG are not intended to imply any type of ownership or rights to the material.</p>
+			Design and code ©Brandon Slick, 2015.  See it on <a href="https://github.com/Seahowl/anima">Github</a>!  Any use of any trademarks related to the Anima: Beyond Fantasy RPG are not intended to imply any type of ownership or rights to the material. Email me at <a href="mailto:brandslick@gmail.com">brandslick@gmail.com</a> with any questions, comments, or concerns.
 		</footer>
-	</div>
-</body>
-</html>
+</body></html>

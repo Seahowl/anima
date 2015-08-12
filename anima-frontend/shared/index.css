@@ -1,0 +1,179 @@
+html, body 
+{ 
+	height: calc(100% - 28px);
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20px;
+	background-color: #005829;
+}
+.navbar-pageheader 
+{ 
+	border-radius:0; 
+	background-color: #1F8458;
+	border-color: #6DA23D;
+	border-width: 0px;
+	border-bottom-width: 3px;
+	margin-bottom: 0px;
+}
+.navbar-pageheader-default .navbar-pageheader-nav>li>a, .navbar-pageheader-default .navbar-pageheader-brand
+{
+	color: #DDFEC4;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #005829;
+	font-family: 'Alegreya', serif;
+	font-size: 2em;
+}
+.navbar-pageheader-brand
+{
+	padding-top:0px;
+	padding-bottom: 0px;
+}
+.navbar-dominionheader 
+{ 
+	border-radius:0; 
+	background-color: #1F8458;
+	border-color: #6DA23D;
+	border-width: 0px;
+	border-bottom-width: 3px;
+	margin: -5px -5px 0px -5px;
+}
+.navbar-dominionheader-nav
+{
+    width: 100%;
+    text-align: center;
+}
+.navbar-dominionheader-nav>li 
+{
+      float: none;
+      display: inline-block;
+}
+.navbar-dominionheader-default .navbar-dominionheader-nav>li>a, .navbar-dominionheader-default .navbar-dominionheader-brand
+{
+	color: #DDFEC4;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #005829;
+	font-family: 'Alegreya', serif;
+	font-size: 1.5em;
+}
+.contentholder
+{
+	position: relative;
+	display: flex;
+	min-height: 100%;
+	font-size: 1.2em;
+}
+.container
+{
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+}
+.pagecontent
+{
+	background-color: #F0FEE5;
+	border-color: #6DA23D;
+	border-width: 0px;
+	border-left-width: 3px;
+	border-right-width: 3px;
+	border-style: solid;
+	margin-right: 5%;
+	margin-left: 10%;
+	min-height: 100%;
+	padding: 5px;
+	flex-grow: 1;
+}
+.paddedimage
+{
+	padding: 10px;
+}
+.paddeddetail
+{
+	padding: 2% 2% 0px 2%;
+}
+details > summary
+{
+	background-color: #60B08E;
+	font-size: 1.1em;
+	padding: 1px;
+}
+details > a
+{
+	color: #664466;
+}
+details
+{
+	background-color: #C0F299;
+}
+.hidehelp
+{
+	display: none;
+}
+.showhelp
+{
+	height:auto;
+	display: block;
+	border: 1px solid #6DA23D;
+	padding: 15px;
+}
+.leveltableclass
+{
+	min-width:60%;
+	margin-right: auto;
+}
+.leveltableclass>tbody>tr:nth-child(even)
+{
+	background-color:#C0F299; 
+}
+.leveltableheader
+{
+	font-weight:bold;
+	border-bottom: 2px solid #6DA23D;
+}
+.modifierheader
+{
+	font-size: 1.1em;
+}
+.helpicon
+{
+	font-size: 2em;
+	color: #005829;
+	cursor: pointer;
+	padding-right: 15px;
+}
+.nameheader
+{
+	color: #005829;
+	font-family: 'Alegreya', serif;
+	font-size: 1.3em;
+}
+.wrappeddescription
+{
+	white-space: pre-wrap;
+	background-color: #C0F299
+}
+.floatright
+{
+	float:right;
+}
+.detailtableclass
+{
+	min-width:80%;
+	margin-right: auto;
+}
+.footer 
+{
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	min-height: 10px;
+	background-color: #1F8458;
+	border-color: #6DA23D;
+	border-style: solid;
+	border-width: 0px;
+	border-top-width: 3px;
+	padding-bottom: 0px;
+	color: black;
+}
+.footer>a
+{
+	color: #DDFEC4;
+}

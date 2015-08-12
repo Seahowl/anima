@@ -1,0 +1,7 @@
+<div class="paddeddetail" ng-repeat="pk in jsonStuff">
+	<details>
+		<summary>{{pk.fields.effect_name}}</summary>
+		<div>{{pk.fields.effect_description | limitTo:400}}{{pk.fields.effect_description.length < 400 ? '' : '...'}}</div>
+		<span class="rightalign"><a ui-sref="dominion.effect({ effectId: {{pk.pk}}})">Details</a></span>
+	</details>
+</div>

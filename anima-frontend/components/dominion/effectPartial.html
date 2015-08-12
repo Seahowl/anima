@@ -1,0 +1,80 @@
+<p class="nameheader">{{jsonStuff[0].fields.effect_name}}</p>
+<p class="wrappeddescription">{{jsonStuff[0].fields.effect_description}}</p>
+<br />
+<table class="detailtableclass">
+	<tr>
+		<td><strong>Frequency:</strong> {{jsonStuff[0].fields.effect_frequency}}</td>
+		<td class="floatright"><strong>Action Type:</strong> {{jsonStuff[0].fields.effect_action_type}}</td>
+	</tr>
+	<tr>
+		<td><strong>Primary Characteristic:</strong> {{primaryStat}}</td>
+		<td class="floatright"><strong>Elements:</strong> {{jsonStuff[0].fields.effect_elements}}</td>
+	</tr>
+	<tr>
+		<td><strong>Optional Characteristics:</strong> {{secondaryStatList}}</td>
+	</tr>
+</table>
+<br />
+<table class="leveltableclass">
+	<tr class="leveltableheader">
+		<td>{{jsonStuff[0].fields.effect_level_name}}</td>
+		<td>Primary</td>
+		<td>Secondary</td>
+		<td>MK</td>
+		<td>Maint</td>
+		<td>MiS</td>
+		<td>GrS</td>
+		<td>Level</td>
+	</tr>
+	<tr ng-repeat="level in jsonLevelsStuff">
+		<td>{{level.fields.level_name}}</td>
+		<td>{{level.fields.level_primary_cost}}</td>
+		<td>{{level.fields.level_secondary_cost}}</td>
+		<td>{{level.fields.level_mk}}</td>
+		<td>{{level.fields.level_maint}}</td>
+		<td>{{level.fields.level_mis}}</td>
+		<td>{{level.fields.level_grs}}</td>
+		<td>{{level.fields.level_tech_level == 1 ? '' : level.fields.level_tech_level}}</td>
+	</tr>
+</table>
+<br />
+<p class="nameheader">{{jsonModifiersStuff.length == 0? '':'Effect Modifiers'}}</p>
+<div ng-repeat="modifier in jsonModifiersStuff">
+	<p><strong class="modifierheader">{{modifier.fields.modifier_name}}</strong></p>
+	<p>{{modifier.fields.modifier_description}}</p>
+	<table class="leveltableclass">
+		<tr class="leveltableheader">
+			<td>{{modifier.fields.modifier_level_name}}</td>
+			<td>Cost</td>
+			<td>MK</td>
+			<td>Maint</td>
+			<td>MiS</td>
+			<td>GrS</td>
+		</tr>
+		<tr ng-repeat="modifierLevel in modifier.levels">
+			<td>{{modifierLevel.fields.level_name}}</td>
+			<td>{{modifierLevel.fields.level_cost}}</td>
+			<td>{{modifierLevel.fields.level_mk}}</td>
+			<td>{{modifierLevel.fields.level_maint}}</td>
+			<td>{{modifierLevel.fields.level_mis}}</td>
+			<td>{{modifierLevel.fields.level_grs}}</td>
+		</tr>
+	</table>
+	<br />
+</div>
+<br />
+<div class="floatright helpicon"><strong ng-click="toggleHelp()">?</strong></div>
+<div id="help" class="hidehelp">
+	<strong>Primary:</strong> This number is the Ki point cost if the effect is the main effect of the Technique. <br/>
+	<strong>Secondary:</strong> This number is the Ki point cost if the effect is the secondary effect of the Technique. <br/>
+	<strong>MK:</strong> This number is the Martial Knowledge cost for the Technique. <br/>
+	<strong>Level:</strong> This number is the power level of the effect.  There are three levels: Basic, Major, and Arcane.  IN the table, Basic effects do not have any numeral, Major effects are marked with a 2, and Arcane effects are marked with a 3.  Effects can only be chosen if they are not higher than the level of the Technique they are in.  That is to say, an effect marked with a 2 can only be in second or third level Techniques. <br/>
+	<strong>Primary Characteristic:</strong> This is the base Characteristic for the effect. <br/>
+	<strong>Optional Characteristics:</strong> These are the Characteristic among which the cost in Ki points of the effect can be distributed.  Each optional Characteristic has an added cost, which indicates the extra Ki points a character must pay for distributing points to that specific Characteristic. <br/>
+	<strong>Elements:</strong> These are the elements related to the effect. <br/>
+	<strong>Maintenance:</strong> This is the const of maintaining the effect over several turns.  This number's use is two-fold: it shows how much the effect increases the activation cost and the amount to be paid per turn. <br/>
+	<strong>Minor Sustenance (MiS):</strong> This number is the cost in Ki points that must be added to the base cost of the effect for it to be sustained for 5 turns.  If no value appears, that effect cannot be used in a Sustained Technique. <br/>
+	<strong>Greater Sustenance (GrS):</strong> This number is the cost in Ki points that must be added to the base cost of the effect for it to be sustained for 20 turns (1 minute).  If no value appears, that effect cannot be used in a Sustained Technique. <br/>
+	<strong>Frequency:</strong> This is how often in a turn the effect takes place.  If the effect modifies only one Action in a turn, the word "Action" appears. whereas if the benefits are applied during the whole turn, the word "Turn" appears. <br/>
+	<strong>Action Type:</strong> This is the kind of Action the effect is linked to.  Four different Action Types exist: Attack, Counterattack, Defense, and Variable. <br/> 
+</div>

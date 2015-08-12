@@ -1,1 +1,585 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getModifierLevelsURL"
+			],
+			[
+				"json",
+				"jsonModifiersStuff"
+			],
+			[
+				"tr",
+				"ng-textarea	AngularJS"
+			],
+			[
+				"ab",
+				"abilityNames"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"border-le",
+				"border-left-width"
+			],
+			[
+				"ng-re",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"con",
+				"controller	AngularJS"
+			],
+			[
+				"$scope",
+				"$scope	AngularJS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "anima-frontend/components/dominion/effectPartial.html",
+			"settings":
+			{
+				"buffer_size": 4725,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima-frontend/shared/app.js",
+			"settings":
+			{
+				"buffer_size": 7214,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima/dominion/models.py",
+			"settings":
+			{
+				"buffer_size": 4158,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "anima-frontend/components/dominion/dominionPartial.html",
+			"settings":
+			{
+				"buffer_size": 589,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima-frontend/components/dominion/effectsPartial.html",
+			"settings":
+			{
+				"buffer_size": 348,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima-frontend/components/dominion/treesPartial.html",
+			"settings":
+			{
+				"buffer_size": 159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima-frontend/components/dominion/disadvantagesPartial.html",
+			"settings":
+			{
+				"buffer_size": 159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima-frontend/components/dominion/techniquesPartial.html",
+			"settings":
+			{
+				"buffer_size": 159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "anima-frontend/shared/index.css",
+			"settings":
+			{
+				"buffer_size": 2822,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 81.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 409.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Dev/anima",
+		"/C/Dev/anima/anima",
+		"/C/Dev/anima/anima/dominion",
+		"/C/Dev/anima/anima-frontend",
+		"/C/Dev/anima/anima-frontend/components",
+		"/C/Dev/anima/anima-frontend/components/about",
+		"/C/Dev/anima/anima-frontend/components/dominion",
+		"/C/Dev/anima/anima-frontend/components/home",
+		"/C/Dev/anima/anima-frontend/shared"
+	],
+	"file_history":
+	[
+		"/C/Dev/anima/anima-frontend/shared/app.js",
+		"/C/Dev/anima/anima/dominion/models.py",
+		"/C/Dev/anima/anima-frontend/components/dominion/dominionPartial.html",
+		"/C/Dev/anima/anima-frontend/components/home/homePartial.html",
+		"/C/Dev/anima/anima-frontend/components/about/aboutPartial.html",
+		"/C/Dev/anima/anima-frontend/shared/index.css",
+		"/C/Dev/anima/anima-frontend/index.html",
+		"/C/Dev/anima/anima-frontend/components/dominion/effect/effectPartial.html",
+		"/C/Dev/anima/anima-frontend/components/dominion/effect/effectController.js",
+		"/C/Dev/anima/anima/dominion/urls.py",
+		"/C/Dev/angularTest/Views/tabset.html",
+		"/C/Dev/angularTest/Views/tabTest.html",
+		"/C/Dev/angularTest/Controllers/tabTest.js",
+		"/C/Dev/angularTest/Controllers/functionalities.js",
+		"/C/Dev/angularTest/Styles/functionalities.css",
+		"/C/Dev/angularTest/Views/functionalities.html",
+		"/C/Users/Brandon/Documents/mnpls notes",
+		"/C/Dev/angularTest/Views/service.html",
+		"/C/Dev/angularTest/Controllers/controller1.js",
+		"/C/Dev/angularTest/Controllers/greetings.js",
+		"/C/Dev/angularTest/Views/greetings.html",
+		"/C/Dev/angularTest/Controllers/service.js",
+		"/C/Dev/angularTest/Views/binding.html",
+		"/C/Dev/angularTest/Views/controller.html",
+		"/C/Dev/angularTest/index.html",
+		"/C/Dev/angular-phonecat/app/index.html",
+		"/C/Dev/angular-phonecat/app/js/controllers.js"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"data",
+			"ng-view"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "anima-frontend/components/dominion/effectPartial.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1392,
+								1392
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "anima-frontend/shared/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5602,
+								2389
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 962.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "anima/dominion/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4158,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "anima-frontend/components/dominion/dominionPartial.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "anima-frontend/components/dominion/effectsPartial.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								203,
+								203
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "anima-frontend/components/dominion/treesPartial.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "anima-frontend/components/dominion/disadvantagesPartial.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								5
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "anima-frontend/components/dominion/techniquesPartial.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "anima-frontend/shared/index.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2203,
+								2203
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2106.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "animaProj.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
