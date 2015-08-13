@@ -1,0 +1,24 @@
+<p class="nameheader">{{treeJSON[0].fields.name}}</p>
+<p class="wrappeddescription">{{treeJSON[0].fields.description}}</p>
+<table class="detailtableclass">
+	<tr>
+		<td><strong>Total MK:</strong> {{treeJSON[0].fields.mk}}</td>
+		<td><strong>Number of Techniques:</strong> {{treeJSON[0].fields.num_techniques}}</td>
+	</tr>
+</table>
+<br />
+<p class="nameheader">Techniques</p>
+<div class="faketab" ng-repeat="technique in treeTechniquesJSON">
+	<strong class="modifierheader">{{technique[0].fields.name}} &nbsp; <a ui-sref="dominion.technique({ techniqueId: {{technique[0].pk}}})">&#10095;Details</a></strong><br/>
+	<tr>
+		<td>Level: {{technique[0].fields.level}}</td>
+		<td class="floatright">MK: {{technique[0].fields.mk}}</td>
+	</tr>
+	<p class="wrappeddescription">{{technique[0].fields.description}}</p>
+	<br />
+</div>
+<div class="floatright helpicon"><strong ng-click="toggleHelp()">?</strong></div>
+<div id="help" class="hidehelp">
+	<strong>Total MK:</strong> This number is the number of MK points for the Techniques in the tree.<br/>
+	<strong>Number of Techniques</strong> This number is how many Techniques are in the tree. <br/>
+</div>

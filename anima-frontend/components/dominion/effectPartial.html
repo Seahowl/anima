@@ -1,23 +1,23 @@
-<p class="nameheader">{{jsonStuff[0].fields.effect_name}}</p>
-<p class="wrappeddescription">{{jsonStuff[0].fields.effect_description}}</p>
+<p class="nameheader">{{effectJSON[0].fields.effect_name}}</p>
+<p class="wrappeddescription">{{effectJSON[0].fields.effect_description}}</p>
 <br />
 <table class="detailtableclass">
 	<tr>
-		<td><strong>Frequency:</strong> {{jsonStuff[0].fields.effect_frequency}}</td>
-		<td class="floatright"><strong>Action Type:</strong> {{jsonStuff[0].fields.effect_action_type}}</td>
+		<td><strong>Frequency:</strong> {{effectJSON[0].fields.effect_frequency}}</td>
+		<td class="floatright"><strong>Action Type:</strong> {{effectJSON[0].fields.effect_action_type}}</td>
 	</tr>
 	<tr>
 		<td><strong>Primary Characteristic:</strong> {{primaryStat}}</td>
-		<td class="floatright"><strong>Elements:</strong> {{jsonStuff[0].fields.effect_elements}}</td>
+		<td class="floatright"><strong>Elements:</strong> {{effectJSON[0].fields.effect_elements}}</td>
 	</tr>
 	<tr>
-		<td><strong>Optional Characteristics:</strong> {{secondaryStatList}}</td>
+		<td colspan="2"><strong>Optional Characteristics:</strong> {{secondaryStatList}}</td>
 	</tr>
 </table>
 <br />
 <table class="leveltableclass">
 	<tr class="leveltableheader">
-		<td>{{jsonStuff[0].fields.effect_level_name}}</td>
+		<td>{{effectJSON[0].fields.effect_level_name}}</td>
 		<td>Primary</td>
 		<td>Secondary</td>
 		<td>MK</td>
@@ -26,7 +26,7 @@
 		<td>GrS</td>
 		<td>Level</td>
 	</tr>
-	<tr ng-repeat="level in jsonLevelsStuff">
+	<tr ng-repeat="level in effectLevelsJSON">
 		<td>{{level.fields.level_name}}</td>
 		<td>{{level.fields.level_primary_cost}}</td>
 		<td>{{level.fields.level_secondary_cost}}</td>
@@ -38,8 +38,12 @@
 	</tr>
 </table>
 <br />
-<p class="nameheader">{{jsonModifiersStuff.length == 0? '':'Effect Modifiers'}}</p>
-<div ng-repeat="modifier in jsonModifiersStuff">
+	<div class="faketab" ng-repeat="level in effectLevelsJSON" ng-if="level.fields.level_description.length != 0">
+		{{level.fields.level_name}} : ({{level.fields.level_description}})
+		<br />
+	</div>
+<p class="nameheader">{{effectModifiersJSON.length == 0? '':'Effect Modifiers'}}</p>
+<div ng-repeat="modifier in effectModifiersJSON">
 	<p><strong class="modifierheader">{{modifier.fields.modifier_name}}</strong></p>
 	<p>{{modifier.fields.modifier_description}}</p>
 	<table class="leveltableclass">
@@ -61,14 +65,18 @@
 		</tr>
 	</table>
 	<br />
+	<div class="faketab" ng-repeat="modifierLevel in modifier.levels" ng-if="modifierLevel.fields.level_description.length != 0">
+		{{modifierLevel.fields.level_name}} : ({{modifierLevel.fields.level_description}})
+		<br />
+	</div>	
 </div>
 <br />
 <div class="floatright helpicon"><strong ng-click="toggleHelp()">?</strong></div>
 <div id="help" class="hidehelp">
 	<strong>Primary:</strong> This number is the Ki point cost if the effect is the main effect of the Technique. <br/>
 	<strong>Secondary:</strong> This number is the Ki point cost if the effect is the secondary effect of the Technique. <br/>
-	<strong>MK:</strong> This number is the Martial Knowledge cost for the Technique. <br/>
-	<strong>Level:</strong> This number is the power level of the effect.  There are three levels: Basic, Major, and Arcane.  IN the table, Basic effects do not have any numeral, Major effects are marked with a 2, and Arcane effects are marked with a 3.  Effects can only be chosen if they are not higher than the level of the Technique they are in.  That is to say, an effect marked with a 2 can only be in second or third level Techniques. <br/>
+	<strong>MK:</strong> This number is the Martial Knowledge cost added to the Technique for this effect. <br/>
+	<strong>Level:</strong> This number is the power level of the effect.  There are three levels: Basic, Major, and Arcane.  In the table, Basic effects do not have any numeral, Major effects are marked with a 2, and Arcane effects are marked with a 3.  Effects can only be chosen if they are not higher than the level of the Technique they are in.  That is to say, an effect marked with a 2 can only be in second or third level Techniques. <br/>
 	<strong>Primary Characteristic:</strong> This is the base Characteristic for the effect. <br/>
 	<strong>Optional Characteristics:</strong> These are the Characteristic among which the cost in Ki points of the effect can be distributed.  Each optional Characteristic has an added cost, which indicates the extra Ki points a character must pay for distributing points to that specific Characteristic. <br/>
 	<strong>Elements:</strong> These are the elements related to the effect. <br/>

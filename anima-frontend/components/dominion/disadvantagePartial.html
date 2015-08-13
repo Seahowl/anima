@@ -1,0 +1,33 @@
+<p class="nameheader">{{disadvantageJSON[0].fields.name}}</p>
+<p class="wrappeddescription">{{disadvantageJSON[0].fields.description}}</p>
+<br />
+<table class="detailtableclass">
+	<tr>
+		<td><strong>Action Type:</strong> {{disadvantageJSON[0].fields.action}}</td>
+	</tr>
+</table>
+<br />
+<table class="leveltableclass">
+	<tr class="leveltableheader">
+		<td>{{disadvantageJSON[0].fields.level_name}}</td>
+		<td>MK Reduction</td>
+		<td>Level</td>
+	</tr>
+	<tr ng-repeat="level in disadvantageLevelsJSON">
+		<td>{{level.fields.name}}</td>
+		<td>{{level.fields.mk}}</td>
+		<td>{{level.fields.level == 1 ? '' : level.fields.level}}</td>
+	</tr>
+</table>
+<br />
+<div class="faketab" ng-repeat="level in disadvantageLevelsJSON" ng-if="level.fields.description.length != 0">
+	{{level.fields.name}} : ({{level.fields.description}})
+	<br />
+</div>
+<div class="floatright helpicon"><strong ng-click="toggleHelp()">?</strong></div>
+<div id="help" class="hidehelp">
+	Adding a disadvantage to a Technique lowers its cost in MK.  For example, a Technique that can only be used at less than half of your life points will cost 10 MK less than it would without the disadvantage.  The number of disadvantages a Technique can have is limited by it's level.  Basic techniques can have one, Major techniques can have 2, and Arcane techniques can have at most 3.  Disadvantages cannot reduce the cost of a technique below half of its normal cost, and they cannot reduce the cost below the lower limit for the level of the Technique.<br/><br />
+	<strong>MK:</strong> This number is the Martial Knowledge reduction this level of the disadvantage grants. <br/>
+	<strong>Level:</strong> This number is the power level of the disadvantage.  There are three levels: Basic, Major, and Arcane.  In the table, Basic disadvantages do not have any numeral, Major disadvantages are marked with a 2, and Arcane disadvantages are marked with a 3.  Disadvantages can only be chosen if they are not higher than the level of the Technique they are in.  That is to say, a disadvantage marked with a 2 can only be in second or third level Techniques. <br/>
+	<strong>Action Type:</strong> This is the kind of Action the effect is linked to.  Four different Action Types exist: Attack, Counterattack, Defense, and Variable. <br/> 
+</div>

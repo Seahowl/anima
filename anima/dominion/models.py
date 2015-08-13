@@ -46,6 +46,7 @@ class Effect_Modifier_Level(models.Model):
 class Effect_Level(models.Model):
 	effect = models.ForeignKey(Effect)
 	level_name = models.CharField(max_length=20)
+	level_description = models.TextField(default="", blank=True)
 	level_primary_cost = models.IntegerField()
 	level_secondary_cost = models.IntegerField()
 	level_mk = models.IntegerField()
@@ -56,6 +57,25 @@ class Effect_Level(models.Model):
 
 	def __str__(self):
 		return str(self.effect) + " " + self.level_name	
+
+class Disadvantage(models.Model):
+	name = models.CharField(max_length=20)
+	description	= models.TextField(default="")
+	level_name = models.CharField(max_length=40)
+	action = models.CharField(max_length=40)
+
+	def __str__(self):
+		return self.name
+
+class Disadvantage_Level(models.Model):
+	disadvantage = models.ForeignKey(Disadvantage)
+	name = models.CharField(max_length=40)
+	description = models.TextField(default="", blank=True)
+	mk = models.IntegerField()
+	level = models.IntegerField()
+
+	def __str__(self):
+		return str(self.disadvantage) + " " + self.name
 
 class Technique(models.Model):
 # a Technique has its own attributes, and has advantages (which might have their own advantages) and disadvantages
@@ -83,6 +103,8 @@ class Technique(models.Model):
 	effect_levels = models.ManyToManyField(Effect_Level)
 	effect_modifiers = models.ManyToManyField(Effect_Modifier, blank=True)
 	effects_modifier_levels = models.ManyToManyField(Effect_Modifier_Level, blank=True)
+	disadvantages = models.ManyToManyField(Disadvantage, blank=True)
+	disadvantages_levels = models.ManyToManyField(Disadvantage_Level, blank=True)
 	def __str__(self):
 		return self.name	
 
@@ -91,24 +113,8 @@ class Tree(models.Model):
 	name = models.CharField(max_length=200)
 	description = models.TextField(default="")
 	techniques = models.ManyToManyField(Technique)
-
-	def __str__(self):
-		return self.name
-
-class Disadvantage(models.Model):
-	name = models.CharField(max_length=20)
-	description	= models.TextField(default="")
-	action = models.CharField(max_length=40)
-
-	def __str__(self):
-		return self.name
-
-class Disadvantage_Level(models.Model):
-	disadvantage = models.ForeignKey(Disadvantage)
-	name = models.CharField(max_length=40)
-	description = models.TextField(default="", blank=True)
 	mk = models.IntegerField()
-	level = models.IntegerField()
+	num_techniques = models.IntegerField()
 
 	def __str__(self):
-		return str(self.disadvantage) + " " + self.name
+		return self.name

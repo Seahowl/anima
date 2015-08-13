@@ -1,6 +1,7 @@
-<div class="paddeddetail" ng-repeat="pk in jsonStuff">
+<div class="paddeddetail" ng-repeat="pk in techniquesJSON">
 	<details>
 		<summary>{{pk.fields.name}}</summary>
-		<p>{{pk.fields.description}}</p>
+		<div>{{pk.fields.description | limitTo:400}}{{pk.fields.description.length < 400 ? '' : '...'}}</div>
+		<a ui-sref="dominion.technique({ techniqueId: {{pk.pk}}})">&#10095;Details</a>
 	</details>
 </div>

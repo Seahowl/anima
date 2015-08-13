@@ -1,10 +1,18 @@
 html, body 
 { 
-	height: calc(100% - 28px);
+	height: calc(100% - 32px);
 	margin: 0;
 	padding: 0;
 	padding-bottom: 20px;
 	background-color: #005829;
+	font-size: 1.25vw;
+}
+@media (max-width: 500px)
+{
+    html, body
+    { 
+        font-size: 2.25vw;
+    }
 }
 .navbar-pageheader 
 { 
@@ -21,7 +29,7 @@ html, body
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #005829;
 	font-family: 'Alegreya', serif;
-	font-size: 2em;
+	font-size: 2.5em;
 }
 .navbar-pageheader-brand
 {
@@ -60,7 +68,7 @@ html, body
 	position: relative;
 	display: flex;
 	min-height: 100%;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 .container
 {
@@ -77,7 +85,7 @@ html, body
 	border-right-width: 3px;
 	border-style: solid;
 	margin-right: 5%;
-	margin-left: 10%;
+	margin-left: 5%;
 	min-height: 100%;
 	padding: 5px;
 	flex-grow: 1;
@@ -98,11 +106,12 @@ details > summary
 }
 details > a
 {
-	color: #664466;
+	color: #005829;
 }
 details
 {
-	background-color: #C0F299;
+	border: 1px solid #005829;
+	background-color: #C0F299
 }
 .hidehelp
 {
@@ -119,6 +128,20 @@ details
 {
 	min-width:60%;
 	margin-right: auto;
+	margin-left: auto;
+}
+@media (max-width: 500px)
+{
+    .leveltableclass
+    { 
+	min-width:80%;
+	margin-right: auto;
+	margin-left: auto;
+    }
+}
+.faketab
+{
+	padding-left: 2em;
 }
 .leveltableclass>tbody>tr:nth-child(even)
 {
@@ -133,6 +156,10 @@ details
 {
 	font-size: 1.1em;
 }
+.modifierheader > a
+{
+	color: #005829;
+}
 .helpicon
 {
 	font-size: 2em;
@@ -144,7 +171,7 @@ details
 {
 	color: #005829;
 	font-family: 'Alegreya', serif;
-	font-size: 1.3em;
+	font-size: 1.15em;
 }
 .wrappeddescription
 {
@@ -154,6 +181,10 @@ details
 .floatright
 {
 	float:right;
+}
+.floatcenter
+{
+	float:center;
 }
 .detailtableclass
 {

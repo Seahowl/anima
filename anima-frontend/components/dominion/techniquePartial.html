@@ -1,0 +1,38 @@
+<p class="nameheader">{{techniqueJSON[0].fields.name}}</p>
+<p class="wrappeddescription">{{techniqueJSON[0].fields.description}}</p>
+<table class="detailtableclass">
+	<tr>
+		<td><strong>Level:</strong> {{techniqueJSON[0].fields.level}}</td>
+		<td class="floatcenter"><strong>MK:</strong> {{techniqueJSON[0].fields.mk}}</td>
+		<td class="floatright"><strong>Type:</strong> {{techniqueJSON[0].fields.technique_type}}</td>
+	</tr>
+	<tr>
+		<td colspan="3"><strong>Cost:</strong> {{cost}}</td>
+	</tr>
+	<tr ng-if="maint.length > 0">
+		<td colspan="3"><strong>Maintenance:</strong> {{maint}}</td>
+	</tr>
+</table>
+<br />
+<p class="nameheader">Effects</p>
+<div class="faketab" ng-repeat="effect in techniqueEffectsJSON">
+	<strong class="modifierheader">{{effect[0].fields.effect_name}} ({{effect[0].level[0].fields.level_name}}) &nbsp; <a ui-sref="dominion.effect({ effectId: {{effect[0].pk}}})">&#10095;Details</a></strong>
+	<br />
+	<div class="faketab" ng-repeat="modifier in effect[0].modifiers">
+		&#8627;{{modifier.fields.modifier_name}} ({{modifier.level.fields.level_name}}) 	
+		<br />
+	</div>
+</div>
+<p ng-if="disadvantagesJSON.length > 0" class="nameheader">Disadvantages</p>
+<div class="faketab" ng-repeat="disadvantage in disadvantagesJSON">
+	<strong class="modifierheader">{{disadvantage[0].fields.name}} ({{disadvantage[0].level[0].fields.name}}) &nbsp; <a ui-sref="dominion.disadvantage({ disadvantageId: {{disadvantage[0].pk}}})">&#10095;Details</a></strong>
+	<br />
+</div>
+<div class="floatright helpicon"><strong ng-click="toggleHelp()">?</strong></div>
+<div id="help" class="hidehelp">
+	<strong>MK:</strong> This number is the Martial Knowledge cost for the Technique. <br/>
+	<strong>Level:</strong> This number is the power level of the effect.  There are three levels: Basic, Major, and Arcane.  IN the table, Basic effects do not have any numeral, Major effects are marked with a 2, and Arcane effects are marked with a 3.  Effects can only be chosen if they are not higher than the level of the Technique they are in.  That is to say, an effect marked with a 2 can only be in second or third level Techniques. <br/>
+	<strong>Cost:</strong> This is the cost to activate the technique, given as the number of Ki points you must spend from each statistic. <br/>
+	<strong>Maintenance:</strong> This is the cost you pay each turn to have keep this Technique active after you activate it. <br/>
+	<strong>Type:</strong> Whether the Technique affects one action or multiple actions in a turn, and what type of action it affects. <br/>
+</div>
